@@ -1,0 +1,29 @@
+<div class="stripe">
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Users</h1>
+      </div>
+    </div>
+  </div>   
+  <div class="stripe">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <img src="<%= @users.url %>" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="caption"><%= @users.caption %></div>
+        <div class="links">
+          <a href="/user/<%=@users.id%>/edit">edit</a>
+          <a href="/user/<%=@users.id%>/destroy">delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
