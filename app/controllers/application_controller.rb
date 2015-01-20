@@ -15,11 +15,12 @@ class ApplicationController < ActionController::Base
   
 
   def create
-    g = User.new
+  g = User.new
   g.caption = params['caption']
   g.url = params['url']
+  g.name = params['name']
   g.save
-  redirect_to "/gifs/#{ g.id }"
+    redirect_to "/user/#{ g.id }"
   end
 
   
@@ -37,9 +38,10 @@ end
     
   def update
     g = User.find_by_id(params['id'])
-  g.caption = params['caption']
+     g.caption = params['caption']
   g.url = params['url']
+  g.name = params['name']
   g.save
-  redirect_to "/gifs/#{ g.id }"
+    redirect_to "/user/#{ g.id }"
   end
   end
